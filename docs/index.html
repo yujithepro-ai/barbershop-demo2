@@ -58,14 +58,37 @@
   </section>
 
   <!-- Gallery -->
-  <section class="py-16 px-6">
-    <h2 class="text-3xl font-semibold text-center mb-10">Gallery</h2>
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
-      <img src="https://source.unsplash.com/400x400/?fade-haircut" class="rounded-2xl shadow-lg">
-      <img src="https://source.unsplash.com/400x400/?barber-shop" class="rounded-2xl shadow-lg">
-      <img src="https://source.unsplash.com/400x400/?mens-haircut" class="rounded-2xl shadow-lg">
+<section class="py-16 px-6">
+  <h2 class="text-3xl font-semibold text-center mb-10">Gallery</h2>
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+
+    <div class="overflow-hidden rounded-2xl shadow-lg transform transition duration-300 hover:scale-105">
+      <a href="images/barber1.jpg" class="glightbox">
+        <img src="images/barber1.jpg" class="w-full h-full object-cover" alt="" />
+      </a>
     </div>
-  </section>
+
+    <div class="overflow-hidden rounded-2xl shadow-lg transform transition duration-300 hover:scale-105">
+      <a href="images/barber2.jpg" class="glightbox">
+        <img src="images/barber2.jpg" class="w-full h-full object-cover" alt="" />
+      </a>
+    </div>
+
+    <div class="overflow-hidden rounded-2xl shadow-lg transform transition duration-300 hover:scale-105">
+      <a href="images/shop1.jpg" class="glightbox">
+        <img src="images/shop1.jpg" class="w-full h-full object-cover" alt="" />
+      </a>
+    </div>
+
+  </div>
+</section>
+
+<!-- GLightbox -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
+<script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+<script>
+  const lightbox = GLightbox({ selector: '.glightbox' });
+</script>
 
   <!-- Testimonials -->
   <section class="bg-gray-900 text-white py-16 px-6">
@@ -87,11 +110,25 @@
   </section>
 
   <!-- Contact + Map -->
-  <section id="contact" class="py-16 px-6 text-center">
-    <h2 class="text-3xl font-semibold mb-6">Visit Us</h2>
-    <p class="text-lg">3-A 2nd St, Framingham, MA 01702</p>
-    <p class="text-lg">Phone: (508) 872-5556</p>
-    <p class="text-lg mb-6">Hours: Open · Closes 7 PM</p>
+<section id="contact" class="py-16 px-6 text-center">
+  <h2 class="text-3xl font-semibold mb-6">Visit Us</h2>
+  <p class="text-lg font-medium">3-A 2nd St, Framingham, MA 01702</p>
+  <p class="text-lg font-medium">Phone: (508) 872-5556</p>
+  
+  <div class="text-lg mb-6 mt-4">
+    <p><strong>Hours of Operation:</strong></p>
+    <p>Monday - Saturday: 9:00 AM – 7:00 PM</p>
+    <p>Sunday: Closed</p>
+  </div>
 
-    <div class="max-w-4xl mx-auto">
-      <iframe
+  <!-- Google Maps Embed -->
+  <div class="max-w-4xl mx-auto">
+    <iframe
+      class="w-full h-80 rounded-2xl shadow"
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2948.XXXXXX!2d-71.XXXXXX!3d42.XXXXXX!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xXXXXXX!2sGrandes%20Ligas%20Barbershop!5e0!3m2!1sen!2sus!4vXXXXXXXXXXXXXX"
+      allowfullscreen=""
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+  </div>
+</section>
